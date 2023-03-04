@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Scrapper for rutracker.org</title>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+		<script src="options.js"></script>
+		<link rel="stylesheet" href="style.css">
+	</head>
+	<body>
+		<div class="container">
+			<div class="left-block">
+				<div id="category_map"></div>
+				<div class="toolbar">
+					<button id="scrape_categories">Обновить каталог</button>
+				</div>
+			</div>
+			<div class="right-block">
+				<div class="themes-list">
+					<div id="themes-list-table"></div>
+					<div class="toolbar">
+						<div id="category-url-string"><span>URL категории: </span><a id="category-url" href=""></a></div>
+						<button id="scrape_themes_list">Обновить список тем</button>
+						<button id="clear-all-themes-list">Очистить весь список тем</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

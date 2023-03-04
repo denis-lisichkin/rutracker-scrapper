@@ -1,0 +1,32 @@
+{
+	"name": "Scrapper for rutracker.org",
+	"description": "Getting data about categories and torrents in rutracker.org",
+	"version": "0.1",
+	"manifest_version": 3,
+	"icons": {
+		"16": "images/web-crawler-16.png",
+		"32": "images/web-crawler-32.png",
+		"48": "images/web-crawler-48.png",
+		"128": "images/web-crawler-128.png"
+	},
+	"action": {
+		"default_icon": {
+			"16": "images/web-crawler-16.png",
+			"32": "images/web-crawler-32.png",
+			"48": "images/web-crawler-48.png",
+			"128": "images/web-crawler-128.png"
+		}
+	},
+	"background": {
+		"service_worker": "background.js"
+	},
+	"content_scripts": [
+		{
+			"matches": ["https://rutracker.org/*"],
+			"css": ["style.css"],
+			"js": ["content-script.js"]
+		}
+	],
+	"options_page": "options.html",
+	"permissions": ["storage"]
+}
